@@ -13,9 +13,9 @@ This guide will walk you through deploying Typebot on Vercel (free tier) for pol
 
 ## Database Configuration
 
-Your Supabase database URL:
+Your Supabase database URL (password URL-encoded):
 ```
-postgresql://postgres:Great25fire!!@db.ekrcctblmixdrfthugjv.supabase.co:5432/postgres
+postgresql://postgres:Great25fire%21%21@db.ekrcctblmixdrfthugjv.supabase.co:5432/postgres
 ```
 
 > ⚠️ **Important**: Keep this URL private! Never commit it to a public repository.
@@ -47,7 +47,7 @@ Add these environment variables in Vercel (Settings → Environment Variables):
 
 | Variable | Value | Description |
 |----------|-------|-------------|
-| `DATABASE_URL` | `postgresql://postgres:Great25fire!!@db.ekrcctblmixdrfthugjv.supabase.co:5432/postgres` | PostgreSQL connection string |
+| `DATABASE_URL` | `postgresql://postgres:Great25fire%21%21@db.ekrcctblmixdrfthugjv.supabase.co:5432/postgres` | PostgreSQL connection string |
 | `ENCRYPTION_SECRET` | `polanco_adv_2024_secure_key_32ch` | **Must be exactly 32 characters!** |
 | `NEXTAUTH_URL` | `https://your-builder-url.vercel.app` | Builder's public URL (for auth) |
 | `NEXT_PUBLIC_VIEWER_URL` | `https://your-viewer-url.vercel.app` | Viewer's public URL |
@@ -86,7 +86,7 @@ These environment variables are similar to the Builder, but **do NOT include ADM
 
 | Variable | Value | Notes |
 |----------|-------|-------|
-| `DATABASE_URL` | `postgresql://postgres:Great25fire!!@db.ekrcctblmixdrfthugjv.supabase.co:5432/postgres` | Same as builder |
+| `DATABASE_URL` | `postgresql://postgres:Great25fire%21%21@db.ekrcctblmixdrfthugjv.supabase.co:5432/postgres` | Same as builder |
 | `ENCRYPTION_SECRET` | `polanco_adv_2024_secure_key_32ch` | **Must match builder exactly!** |
 | `NEXTAUTH_URL` | `https://your-builder-url.vercel.app` | Points to **builder** URL (for auth callbacks) |
 | `NEXT_PUBLIC_VIEWER_URL` | `https://your-viewer-url.vercel.app` | Points to **this** viewer URL |
