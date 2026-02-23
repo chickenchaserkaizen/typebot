@@ -49,11 +49,12 @@ Add these environment variables in Vercel (Settings → Environment Variables):
 |----------|-------|-------------|
 | `DATABASE_URL` | `postgresql://postgres:Great25fire!!@db.ekrcctblmixdrfthugjv.supabase.co:5432/postgres` | PostgreSQL connection string |
 | `ENCRYPTION_SECRET` | `polanco_adv_2024_secure_key_32ch` | 32-character encryption key (change this!) |
-| `NEXTAUTH_URL` | `https://your-builder-url.vercel.app` | Your builder's public URL |
-| `NEXT_PUBLIC_VIEWER_URL` | `https://your-viewer-url.vercel.app` | Your viewer's public URL (deploy in Step 2) |
-| `ADMIN_EMAIL` | `your-email@example.com` | Your email for admin access |
+| `NEXTAUTH_URL` | `https://your-builder-url.vercel.app` | Builder's public URL (for auth) |
+| `NEXT_PUBLIC_VIEWER_URL` | `https://your-viewer-url.vercel.app` | Viewer's public URL |
+| `ADMIN_EMAIL` | `your-email@example.com` | Your email for unlimited plan access |
 
 > 💡 **Tip**: Generate a secure `ENCRYPTION_SECRET` using: `openssl rand -base64 32`
+5ZfXFmrfhUcjPDKgGSs+zRAe4SQzuI/OzbIldXWfzxo=
 
 ### 1.3 Deploy
 
@@ -81,14 +82,16 @@ The Viewer is the public-facing bot interface that your website visitors will in
 
 ### 2.2 Add Environment Variables
 
-Use the **same** environment variables as the Builder:
+These environment variables are similar to the Builder, but **do NOT include ADMIN_EMAIL**:
 
-| Variable | Value |
-|----------|-------|
-| `DATABASE_URL` | `postgresql://postgres:Great25fire!!@db.ekrcctblmixdrfthugjv.supabase.co:5432/postgres` |
-| `ENCRYPTION_SECRET` | `polanco_adv_2024_secure_key_32ch` (must match builder!) |
-| `NEXTAUTH_URL` | `https://your-builder-url.vercel.app` |
-| `NEXT_PUBLIC_VIEWER_URL` | `https://your-viewer-url.vercel.app` |
+| Variable | Value | Notes |
+|----------|-------|-------|
+| `DATABASE_URL` | `postgresql://postgres:Great25fire!!@db.ekrcctblmixdrfthugjv.supabase.co:5432/postgres` | Same as builder |
+| `ENCRYPTION_SECRET` | `polanco_adv_2024_secure_key_32ch` | **Must match builder exactly!** |
+| `NEXTAUTH_URL` | `https://your-builder-url.vercel.app` | Points to **builder** URL (for auth callbacks) |
+| `NEXT_PUBLIC_VIEWER_URL` | `https://your-viewer-url.vercel.app` | Points to **this** viewer URL |
+
+> ⚠️ **Note**: Do NOT add `ADMIN_EMAIL` to the viewer - it's only needed on the builder.
 
 ### 2.3 Deploy
 
