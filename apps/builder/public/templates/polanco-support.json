@@ -1,0 +1,543 @@
+{
+  "version": "6.1",
+  "id": "polanco-support-001",
+  "name": "Polanco Support",
+  "events": [
+    {
+      "id": "start-event",
+      "outgoingEdgeId": "start-edge",
+      "graphCoordinates": { "x": 0, "y": 0 },
+      "type": "start"
+    }
+  ],
+  "groups": [
+    {
+      "id": "welcome-group",
+      "title": "Welcome",
+      "graphCoordinates": { "x": 250, "y": 0 },
+      "blocks": [
+        {
+          "id": "welcome-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "👋 Hi there! Welcome to Polanco Advertising!" }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "I'm your virtual assistant. How can I help you today?" }] }
+            ]
+          }
+        },
+        {
+          "id": "main-menu",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "menu-services",
+              "outgoingEdgeId": "edge-services",
+              "content": "🎯 Services & Pricing"
+            },
+            {
+              "id": "menu-portfolio",
+              "outgoingEdgeId": "edge-portfolio",
+              "content": "🖼️ View Portfolio"
+            },
+            {
+              "id": "menu-contact",
+              "outgoingEdgeId": "edge-contact",
+              "content": "📞 Contact Us"
+            },
+            {
+              "id": "menu-quote",
+              "outgoingEdgeId": "edge-quote",
+              "content": "💬 Get a Quote"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services-group",
+      "title": "Services",
+      "graphCoordinates": { "x": 600, "y": -300 },
+      "blocks": [
+        {
+          "id": "services-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "🎯 Our Services", "bold": true }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "At Polanco Advertising, we offer:" }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "✅ Digital Marketing & Social Media" }] },
+              { "type": "p", "children": [{ "text": "✅ Brand Strategy & Identity" }] },
+              { "type": "p", "children": [{ "text": "✅ Content Creation & Video Production" }] },
+              { "type": "p", "children": [{ "text": "✅ Web Design & Development" }] },
+              { "type": "p", "children": [{ "text": "✅ SEO & SEM Campaigns" }] },
+              { "type": "p", "children": [{ "text": "✅ Print & Outdoor Advertising" }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "Would you like more details on any service?" }] }
+            ]
+          }
+        },
+        {
+          "id": "services-menu",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "svc-digital",
+              "outgoingEdgeId": "edge-digital",
+              "content": "Digital Marketing"
+            },
+            {
+              "id": "svc-branding",
+              "outgoingEdgeId": "edge-branding",
+              "content": "Branding"
+            },
+            {
+              "id": "svc-quote",
+              "outgoingEdgeId": "edge-quote",
+              "content": "Get a Quote"
+            },
+            {
+              "id": "svc-back",
+              "outgoingEdgeId": "edge-back-main",
+              "content": "← Back to Main Menu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digital-group",
+      "title": "Digital Marketing",
+      "graphCoordinates": { "x": 950, "y": -500 },
+      "blocks": [
+        {
+          "id": "digital-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "📱 Digital Marketing Services", "bold": true }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "Our digital marketing services include:" }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "• Social Media Management" }] },
+              { "type": "p", "children": [{ "text": "• Google Ads & Meta Ads" }] },
+              { "type": "p", "children": [{ "text": "• Email Marketing Campaigns" }] },
+              { "type": "p", "children": [{ "text": "• Influencer Marketing" }] },
+              { "type": "p", "children": [{ "text": "• Analytics & Reporting" }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "Packages starting from $1,500/month" }] }
+            ]
+          }
+        },
+        {
+          "id": "digital-menu",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "dig-quote",
+              "outgoingEdgeId": "edge-quote",
+              "content": "Get a Custom Quote"
+            },
+            {
+              "id": "dig-back",
+              "outgoingEdgeId": "edge-back-services",
+              "content": "← Back to Services"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "branding-group",
+      "title": "Branding",
+      "graphCoordinates": { "x": 950, "y": -200 },
+      "blocks": [
+        {
+          "id": "branding-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "🎨 Brand Strategy & Identity", "bold": true }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "We help you build a memorable brand:" }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "• Logo Design & Visual Identity" }] },
+              { "type": "p", "children": [{ "text": "• Brand Guidelines" }] },
+              { "type": "p", "children": [{ "text": "• Brand Messaging & Voice" }] },
+              { "type": "p", "children": [{ "text": "• Rebranding Services" }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "Projects starting from $2,500" }] }
+            ]
+          }
+        },
+        {
+          "id": "branding-menu",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "brand-quote",
+              "outgoingEdgeId": "edge-quote",
+              "content": "Get a Custom Quote"
+            },
+            {
+              "id": "brand-back",
+              "outgoingEdgeId": "edge-back-services",
+              "content": "← Back to Services"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "portfolio-group",
+      "title": "Portfolio",
+      "graphCoordinates": { "x": 600, "y": 300 },
+      "blocks": [
+        {
+          "id": "portfolio-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "🖼️ Our Portfolio", "bold": true }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "Check out our latest work:" }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "👉 " }, { "url": "https://polancoadvertising.com/portfolio", "type": "a", "children": [{ "text": "View Full Portfolio" }] }] }
+            ]
+          }
+        },
+        {
+          "id": "portfolio-menu",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "port-quote",
+              "outgoingEdgeId": "edge-quote",
+              "content": "Start a Project"
+            },
+            {
+              "id": "port-back",
+              "outgoingEdgeId": "edge-back-main",
+              "content": "← Back to Main Menu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact-group",
+      "title": "Contact",
+      "graphCoordinates": { "x": 600, "y": 600 },
+      "blocks": [
+        {
+          "id": "contact-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "📞 Contact Us", "bold": true }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "We'd love to hear from you!" }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "📧 Email: hello@polancoadvertising.com" }] },
+              { "type": "p", "children": [{ "text": "📱 Phone: +1 (555) 123-4567" }] },
+              { "type": "p", "children": [{ "text": "📍 Office: 123 Creative Ave, Suite 100" }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "🕐 Business Hours: Mon-Fri, 9AM-6PM EST" }] }
+            ]
+          }
+        },
+        {
+          "id": "contact-menu",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "cont-form",
+              "outgoingEdgeId": "edge-contact-form",
+              "content": "Send a Message"
+            },
+            {
+              "id": "cont-back",
+              "outgoingEdgeId": "edge-back-main",
+              "content": "← Back to Main Menu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact-form-group",
+      "title": "Contact Form",
+      "graphCoordinates": { "x": 950, "y": 600 },
+      "blocks": [
+        {
+          "id": "form-intro",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "Send us a message and we'll get back to you within 24 hours!" }] }
+            ]
+          }
+        },
+        {
+          "id": "form-name",
+          "type": "text input",
+          "options": {
+            "labels": { "placeholder": "Your name" },
+            "variableId": "var-name"
+          }
+        },
+        {
+          "id": "form-email",
+          "type": "email input",
+          "options": {
+            "labels": { "placeholder": "Your email" },
+            "variableId": "var-email"
+          }
+        },
+        {
+          "id": "form-message",
+          "type": "text input",
+          "options": {
+            "labels": { "placeholder": "Your message" },
+            "variableId": "var-message",
+            "isLong": true
+          }
+        },
+        {
+          "id": "form-submit",
+          "outgoingEdgeId": "edge-thankyou",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "submit-btn",
+              "content": "✉️ Send Message"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quote-group",
+      "title": "Get Quote",
+      "graphCoordinates": { "x": 950, "y": 150 },
+      "blocks": [
+        {
+          "id": "quote-intro",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "💬 Get a Free Quote", "bold": true }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "Tell us about your project and we'll provide a custom quote!" }] }
+            ]
+          }
+        },
+        {
+          "id": "quote-name",
+          "type": "text input",
+          "options": {
+            "labels": { "placeholder": "Your name" },
+            "variableId": "var-name"
+          }
+        },
+        {
+          "id": "quote-email",
+          "type": "email input",
+          "options": {
+            "labels": { "placeholder": "Your email" },
+            "variableId": "var-email"
+          }
+        },
+        {
+          "id": "quote-service",
+          "type": "choice input",
+          "options": {
+            "variableId": "var-service"
+          },
+          "items": [
+            { "id": "q-digital", "content": "Digital Marketing" },
+            { "id": "q-branding", "content": "Branding" },
+            { "id": "q-web", "content": "Web Design" },
+            { "id": "q-content", "content": "Content Creation" },
+            { "id": "q-other", "content": "Other" }
+          ]
+        },
+        {
+          "id": "quote-details",
+          "type": "text input",
+          "options": {
+            "labels": { "placeholder": "Tell us about your project..." },
+            "variableId": "var-details",
+            "isLong": true
+          }
+        },
+        {
+          "id": "quote-budget",
+          "type": "choice input",
+          "options": {
+            "variableId": "var-budget"
+          },
+          "items": [
+            { "id": "b-1", "content": "$1,000 - $5,000" },
+            { "id": "b-2", "content": "$5,000 - $10,000" },
+            { "id": "b-3", "content": "$10,000 - $25,000" },
+            { "id": "b-4", "content": "$25,000+" }
+          ]
+        },
+        {
+          "id": "quote-submit",
+          "outgoingEdgeId": "edge-thankyou",
+          "type": "choice input",
+          "items": [
+            { "id": "qs-btn", "content": "📝 Submit Request" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thankyou-group",
+      "title": "Thank You",
+      "graphCoordinates": { "x": 1250, "y": 400 },
+      "blocks": [
+        {
+          "id": "thankyou-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "🎉 Thank you!" }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "We've received your submission and will get back to you within 24 hours." }] },
+              { "type": "p", "children": [{ "text": "" }] },
+              { "type": "p", "children": [{ "text": "In the meantime, feel free to explore our " }, { "url": "https://polancoadvertising.com", "type": "a", "children": [{ "text": "website" }] }, { "text": "!" }] }
+            ]
+          }
+        },
+        {
+          "id": "thankyou-menu",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "ty-restart",
+              "content": "🔄 Start Over"
+            }
+          ]
+        },
+        {
+          "id": "restart-jump",
+          "type": "Jump",
+          "options": { "groupId": "welcome-group" }
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "start-edge",
+      "from": { "eventId": "start-event" },
+      "to": { "groupId": "welcome-group" }
+    },
+    {
+      "id": "edge-services",
+      "from": { "blockId": "main-menu", "itemId": "menu-services" },
+      "to": { "groupId": "services-group" }
+    },
+    {
+      "id": "edge-portfolio",
+      "from": { "blockId": "main-menu", "itemId": "menu-portfolio" },
+      "to": { "groupId": "portfolio-group" }
+    },
+    {
+      "id": "edge-contact",
+      "from": { "blockId": "main-menu", "itemId": "menu-contact" },
+      "to": { "groupId": "contact-group" }
+    },
+    {
+      "id": "edge-quote",
+      "from": { "blockId": "main-menu", "itemId": "menu-quote" },
+      "to": { "groupId": "quote-group" }
+    },
+    {
+      "id": "edge-digital",
+      "from": { "blockId": "services-menu", "itemId": "svc-digital" },
+      "to": { "groupId": "digital-group" }
+    },
+    {
+      "id": "edge-branding",
+      "from": { "blockId": "services-menu", "itemId": "svc-branding" },
+      "to": { "groupId": "branding-group" }
+    },
+    {
+      "id": "edge-back-main",
+      "from": { "blockId": "services-menu", "itemId": "svc-back" },
+      "to": { "groupId": "welcome-group" }
+    },
+    {
+      "id": "edge-back-services",
+      "from": { "blockId": "digital-menu", "itemId": "dig-back" },
+      "to": { "groupId": "services-group" }
+    },
+    {
+      "id": "edge-contact-form",
+      "from": { "blockId": "contact-menu", "itemId": "cont-form" },
+      "to": { "groupId": "contact-form-group" }
+    },
+    {
+      "id": "edge-thankyou",
+      "from": { "blockId": "form-submit" },
+      "to": { "groupId": "thankyou-group" }
+    }
+  ],
+  "variables": [
+    { "id": "var-name", "name": "Name", "isSessionVariable": true },
+    { "id": "var-email", "name": "Email", "isSessionVariable": true },
+    { "id": "var-message", "name": "Message", "isSessionVariable": true },
+    { "id": "var-service", "name": "Service", "isSessionVariable": true },
+    { "id": "var-details", "name": "Project Details", "isSessionVariable": true },
+    { "id": "var-budget", "name": "Budget", "isSessionVariable": true }
+  ],
+  "theme": {
+    "chat": {
+      "maxGuestMessages": 100,
+      "hostAvatar": {
+        "url": "https://polancoadvertising.com/logo.png",
+        "isEnabled": true
+      },
+      "guestAvatar": {
+        "isEnabled": false
+      }
+    },
+    "general": {
+      "font": "Open Sans",
+      "background": {
+        "type": "Color",
+        "content": "#ffffff"
+      }
+    },
+    "roundness": "medium"
+  },
+  "settings": {
+    "general": {
+      "isBrandingEnabled": false,
+      "isInputPrefillEnabled": true,
+      "isHideQueryParamsEnabled": true
+    },
+    "metadata": {
+      "title": "Polanco Advertising Support",
+      "description": "Customer support chat for Polanco Advertising"
+    }
+  },
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-01-01T00:00:00.000Z",
+  "icon": "💬",
+  "folderId": null,
+  "publicId": "polanco-support",
+  "customDomain": null,
+  "workspaceId": "proWorkspace",
+  "resultsTablePreferences": null,
+  "isArchived": false,
+  "isClosed": false,
+  "whatsAppCredentialsId": null
+}
